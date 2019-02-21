@@ -1,0 +1,38 @@
+
+ <HTML>
+ <TITLE>Customer Information</TITLE>
+ <HEAD>
+  <script>
+  function validate() {
+
+         if( document.myForm.firstname.value == "" ) {
+            alert( "Please provide your first name!" );
+            document.myForm.firstname.focus() ;
+            return false;
+         }
+         if( document.myForm.lastname.value == "" ) {
+            alert( "Please provide your last name!" );
+            document.myForm.lastname.focus() ;
+            return false;
+         }
+         return( true );
+		 }
+</script>
+
+<link rel="stylesheet" href="D4_CSS.css">
+  </HEAD>
+ <BODY>
+	<h1>Customer Information</h1>
+	<center>
+	<form name="myForm" action="/action_page.php" onsubmit="return(validate());">
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname"><br>
+  </center>
+  <center>
+  <input type="submit" value="Submit">
+</form>
+</center>
+</BODY>
+</HTML>
